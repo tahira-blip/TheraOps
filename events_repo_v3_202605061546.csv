@@ -1,0 +1,123 @@
+event_code,event_name,event_description,compliance,event_type,eventtype_code,event_status,is_criticalevent,error_level,sa_id,is_manifested,app_code,event_description_fr,event_type_fr,event_id
+sos_0001,Queue In,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,578
+con_0002,Device Offline,,system_compliance,,,,,,,,,,,612
+scon_0002,Sensor Offline,,system_compliance,,,,,,,,,,,613
+tram_0003,Trip In,,system_compliance,,,,,,tram,,tram,,,614
+tram_0004,Trip Out,,system_compliance,,,,,,tram,,tram,,,615
+pc_0001,FOV First Seen,,pc_compliance,PC Compliance,EID 001,passed,TRUE,,,,pc,,,494
+pc_0002,FOV Last Seen,,pc_compliance,PC Compliance,EID 001,passed,TRUE,,,,pc,,,495
+pc_0003,Trip In,,trip_compliance,Trip Compliance,EID 002,passed,TRUE,,,,pc,,,496
+pc_0004,Trip Out,,trip_compliance,Trip Compliance,EID 002,passed,TRUE,,,,pc,,,497
+pc_0005,Zone In,,zone_compliance,Zone Compliance,EID 003,passed,TRUE,,,,pc,,,498
+pc_0006,Zone Out,,zone_compliance,Zone Compliance,EID 004,passed,TRUE,,,,pc,,,499
+pc_0007,Sensor Online,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,pc,,,500
+pc_0008,Sensor Offline,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,pc,,,501
+pc_0009,Edge Device Online,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,pc,,,502
+pc_0010,Edge Offline,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,pc,,,503
+pc_0011,Connected to Viana Cloud,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,pc,,,504
+pc_0012,Viana Cloud Connection Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,pc,,,505
+pc_0013,No FOV Obstruction,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,pc,,,506
+pc_0014,FOV Obstruction Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,pc,,,507
+samdt_0001,No FOV Obstruction,View is clear and camera is properly set up.,system_compliance,System Complied,System Complied,passed,FALSE,None,samdt,FALSE,samdt,,,508
+samdt_0002,Sensor Online,Camera or sensor is online and connected.,system_compliance,System Complied,System Complied,passed,FALSE,None,samdt,FALSE,samdt,,,509
+samdt_0003,Sensor Alerting,Camera or sensor is having problems with internet connection,system_compliance,System Complied,System Complied,failed,FALSE,Critical Error,samdt,FALSE,samdt,,,510
+samdt_0004,Idle Time,No event detected for more than 2 minutes.,system_compliance,System Complied,System Complied,passed,FALSE,None,samdt,FALSE,samdt,,,511
+samdt_0005,FOV Obstruction,View is blocked or camera is improperly set up.,system_compliance,General Error,General Error,failed,FALSE,Warning,samdt,FALSE,samdt,,,512
+samdt_0006,Sensor Offline,Camera or sensor is offline or disconnected.,system_compliance,General Error,General Error,failed,FALSE,Critical Error,samdt,FALSE,samdt,,,513
+samdt_0007,Potential Entry,Vehicle detected at the entry point,order_compliance,Preorder,Preorder,passed,FALSE,None,samdt,FALSE,samdt,,,514
+samdt_0008,Drive Thru Overflow,[Vehicle queue] Non-moving vehicle/s detected before entry point,order_compliance,Preorder,Preorder,passed,FALSE,None,samdt,FALSE,samdt,,,515
+samdt_0009,Drive Thru Balk,Vehicle detected as leaving after detected at entry point.,order_compliance,Preorder,Preorder,balked,TRUE,Warning,samdt,FALSE,samdt,,,516
+samdt_0010,Preorder Entry,Vehicle detected as entering the preorder point.,order_compliance,Preorder,Drive Thru Lane,passed,FALSE,None,samdt,FALSE,samdt,,,517
+samdt_0011,Ordering Queue,Non-moving vehicle/s detected before ordering kiosk tripline . Vehicle detected non moving for 5sec,order_compliance,Drive Thru Lane,Drive Thru Lane,passed,FALSE,None,samdt,FALSE,samdt,,,518
+samdt_0012,Preorder Abandonment,Vehicle detected as leaving after entering DT lane,order_compliance,Drive Thru Lane,Drive Thru Lane,abandoned,FALSE,Warning,samdt,FALSE,samdt,,,519
+samdt_0013,Order Point: Kiosk,Non-moving vehicle detected at ordering kiosk,order_compliance,Order Point,Order Point,passed,FALSE,None,samdt,FALSE,samdt,,,520
+samdt_0014,Abandoned Order,Vehicle detected placing an order but did not complete the order pickup.,order_compliance,Order Point,Order Point,abandoned,TRUE,Warning,samdt,FALSE,samdt,,,521
+samdt_0015,Queue-Lane Entry,Vehicle detected as entering the service queue lane.,order_compliance,Queue Lane,Y-Lane,passed,FALSE,None,samdt,FALSE,samdt,,,522
+samdt_0016,Queue-Lane Exit,Vehicle detected as exiting the service queue lane.,order_compliance,Queue Lane,Y-Lane,passed,FALSE,None,samdt,FALSE,samdt,,,523
+samdt_0017,Serving Order: Current,Non-moving vehicle detected at pull up window . Vehicle detected non moving for 5sec,order_compliance,Pull Up Window,Pull Up Window,passed,FALSE,None,samdt,FALSE,samdt,,,524
+samdt_0018,Serving Order: Next,"Nonmoving vehicle detected right before vehicle in PUW, past the ordering point. Vehicle detected non moving for 5sec",order_compliance,Pull Up Window,Pull Up Window,passed,FALSE,None,samdt,FALSE,samdt,,,525
+samdt_0019,Serving Order: Queue,"All non-moving vehicles right before vehicle in PUW, past the ordering point. Vehicle detected non moving for 5sec",order_compliance,Pull Up Window,Pull Up Window,passed,FALSE,None,samdt,FALSE,samdt,,,526
+samdt_0020,Pull up Exit,Vehicle detected exiting the pull up window.,order_compliance,Pull Up Window,Pull Up Window,passed,FALSE,None,samdt,FALSE,samdt,,,527
+samdt_0021,Quick Service,Total duration of the vehicle at the pull up window - below 50 sec.,queuetime_compliance,Service Time,Service Time,passed,FALSE,None,samdt,FALSE,samdt,,,528
+samdt_0022,Fair Service,Total duration of the vehicle at the pull up window - below 50 to 80sec .,queuetime_compliance,Service Time,Service Time,passed,FALSE,None,samdt,FALSE,samdt,,,529
+samdt_0023,Lengthy Service,Total  duration of the vehicle at the pull up window - beyond 80 sec.,queuetime_compliance,Service Time,Service Time,failed,TRUE,Critical Error,samdt,FALSE,samdt,,,530
+samdt_0024,Quick Journey,Total duration in DT lane to exit is below 3 minutes.,queuetime_compliance,Total Time,Total Time,passed,FALSE,None,samdt,FALSE,samdt,,,531
+samdt_0025,Fair Journey,Total duration in DT lane to exit is below 5 minutes.,queuetime_compliance,Total Time,Total Time,passed,FALSE,None,samdt,FALSE,samdt,,,532
+samdt_0026,Lengthy Journey,Total duration in DT lane to exit is beyond 5 minutes.,queuetime_compliance,Total Time,Total Time,failed,TRUE,Critical Error,samdt,FALSE,samdt,,,533
+samdt_0027,Quick Preorder Queue,Total amount of time spent from the preorder entry  to preorder exit is below 3min.,queuetime_compliance,Queue Time,Queue Time,passed,FALSE,None,samdt,FALSE,samdt,,,534
+samdt_0028,Fair Preorder Queue,Total amount of time spent from the preorder entry  to preorder exit  is between 3min to 5min.,queuetime_compliance,Queue Time,Queue Time,passed,FALSE,None,samdt,FALSE,samdt,,,535
+samdt_0029,Lengthy Preorder Queue,Total amount of time spent from the preorder entry  to preorder exit is beyond 5min.,queuetime_compliance,Queue Time,Queue Time,failed,TRUE,Critical Error,samdt,FALSE,samdt,,,536
+samdt_0030,Preorder Exit,Vehicle detected exiting preorder point.,order_compliance,Preorder,Preorder,passed,FALSE,None,samdt,TRUE,samdt,,,537
+samdt_0031,Order Point Entry,Vehicle detected entering order point.,order_compliance,Order Point,Order Point,passed,FALSE,None,samdt,TRUE,samdt,,,538
+samdt_0032,Order Point Exit,Vehicle detected exiting order point.,order_compliance,Order Point,Order Point,passed,FALSE,None,samdt,TRUE,samdt,,,539
+samdt_0033,Pull up Entry,Vehicle detected entering pull up window.,order_compliance,Pull Up Window,Pull Up Window,passed,FALSE,None,samdt,TRUE,samdt,,,540
+samdt_0034,Quick Service Queue,Total amount of time spent from the order point to PUW entry is below 3min.,queuetime_compliance,Queue Time,Queue Time,passed,FALSE,None,samdt,TRUE,samdt,,,541
+samdt_0035,Fair Service Queue,Total amount of time spent from the order to PUW entry is between 3min to 5min.,queuetime_compliance,Queue Time,Queue Time,passed,FALSE,None,samdt,TRUE,samdt,,,542
+samdt_0036,Lengthy Service Queue,Total amount of time spent from the order to PUW entry is beyond 5min.,queuetime_compliance,Queue Time,Queue Time,failed,FALSE,None,samdt,TRUE,samdt,,,543
+samli_0001,Priced Order: No Product Label,"Ossid work order is for Priced orders, but a label is not detected on the WPL Package.",label_compliance,WPL Package Validation,EID 001: WPL Package Validation: Priced/Non-Priced,failed,TRUE,Critical Error,samli,TRUE,samli,,,544
+samli_0002,Priced Order: With Label,Ossid work order is for Priced orders and a label is detected on the chicken tray.,label_compliance,WPL Package Validation,EID 001: WPL Package Validation: Priced/Non-Priced,passed,FALSE,None,samli,TRUE,samli,,,545
+samli_0003,Non-Priced: With Label,"Ossid work order is for Non-Priced WPL package, but a label is detected on the WPL package.",label_compliance,WPL Package Validation,EID 001: WPL Package Validation: Priced/Non-Priced,failed,TRUE,Critical Error,samli,TRUE,samli,,,546
+samli_0004,Non-Priced: No Label,"Ossid work order is for Non-Priced WPL packages, and a label is not detected on the WPL package.",label_compliance,Non-Priced WPL Package,EID 005: Non-Priced WPL Package,passed,FALSE,None,samli,TRUE,samli,,,547
+samli_0005,Barcode Error: Not Scannable or Non-Compliant with ANSI,"The barcode is not scannable due to smudges, lines, or glitches in barcode printouts, or is non-compliant with ANSI Standards.",label_compliance,Barcode Validation,EID 002: Barcode Validation,failed,TRUE,Critical Error,samli,TRUE,samli,,,548
+samli_0006,Barcode: Scannable,Barcode in the package label is scannable.,label_compliance,Barcode Validation,EID 002: Barcode Validation,passed,FALSE,None,samli,TRUE,samli,,,549
+samli_0007,RPOL Failed: UPC Mismatch for Scanned Barcode and Ossid Work Order,Right Product On The Line Check: Scanned UPC on barcode did not match work order UPC.,label_compliance,Barcode Validation,EID 002: Barcode Validation,failed,TRUE,Critical Error,samli,TRUE,samli,,,550
+samli_0008,RPOL Check Passed,Right Product On The Line Check: Scanned UPC on barcode matches work order UPC.,label_compliance,Barcode Validation,EID 002: Barcode Validation,passed,FALSE,None,samli,TRUE,samli,,,551
+samli_0009,Legibility Critical Error,"Label attributes - Sell by and P-Number are not readable due to smudges, lines, or glitches in barcode printouts, or creases in label application.",label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Critical Error,samli,TRUE,samli,,,552
+samli_0010,Legibility Warning Error,"Label attributes - All Other are not readable due to smudges, lines, or glitches in barcode printouts, or creases in label application.",label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Warning,samli,TRUE,samli,,,553
+samli_0011,Legible,All label attributes are readable.,label_compliance,Text Readability Check,EID 003: Text Readability Check,passed,FALSE,None,samli,TRUE,samli,,,554
+samli_0012,Missing Critical Error,"Label attributes - Sell by, Total Price and P-Number are missing from the label.",label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Critical Error,samli,TRUE,samli,,,555
+samli_0013,Missing Warning Error,"Label attributes - Product Description, Price/ LB, Net Weight and Barcode Human Readable are missing from the label.",label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Warning,samli,TRUE,samli,,,556
+samli_0014,No Missing,No missing attributes from the label.,label_compliance,Text Readability Check,EID 003: Text Readability Check,passed,FALSE,None,samli,TRUE,samli,,,557
+samli_0015,Orientation Critical Error,Label orientation is at: 90°<a<285° where a = package label angle°,label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Critical Error,samli,TRUE,samli,,,558
+samli_0016,Orientation Warning Error,Label orientation is at: 15°<a<90° OR 285°<a<345° where a = package label angle°,label_compliance,Text Readability Check,EID 003: Text Readability Check,failed,TRUE,Warning,samli,TRUE,samli,,,559
+samli_0017,Orientation Correct,Label orientation is either within 0°<a<15° or 345°<a<360°.,label_compliance,Text Readability Check,EID 003: Text Readability Check,passed,FALSE,None,samli,TRUE,samli,,,560
+samli_0018,Placement Critical Error,"Label placement is incorrect, and detected 100% outside the upper right quadrant.",label_compliance,Placement Check,EID 004: Placement Check,failed,TRUE,Critical Error,samli,TRUE,samli,,,561
+samli_0019,Placement Warning Error,"Label placement is incorrect, and detected 21%-99% outside the upper right quadrant.",label_compliance,Placement Check,EID 004: Placement Check,failed,TRUE,Warning,samli,TRUE,samli,,,562
+samli_0020,Placement Correct,Label placement is detected within 100%-80% inside the upper right quadrant.,label_compliance,Placement Check,EID 004: Placement Check,passed,FALSE,None,samli,TRUE,samli,,,563
+samli_0021,Product Mismatch: Description on Package Label and Film,"The product description on the package label does not match the text in the film description, nor any of its product aliases.",label_compliance,Product Description Match,EID 006: Product Description Match,failed,TRUE,Warning,samli,TRUE,samli,,,564
+samli_0022,Product Description Match,The product description on the package label matchs the text in film description correctly.,label_compliance,Product Description Match,EID 006: Product Description Match,passed,FALSE,None,samli,TRUE,samli,,,565
+samli_0023,Sell By Error,The sell by on the package label is > 17 days of the current date,label_compliance,Sell By Date Validation,EID 007: Sale By Date Validation,failed,TRUE,Critical Error,samli,TRUE,samli,,,566
+samli_0024,Sell By Correct,The sell by on the package label is ≤ 17 days of the current date.,label_compliance,Sell By Date Validation,EID 007: Sale By Date Validation,passed,FALSE,None,samli,TRUE,samli,,,567
+samli_0025,Sensor Offline Error,The paired sensor is disconnected.,system_compliance,General Error,EID 008: General Error,failed,TRUE,Critical Error,samli,TRUE,samli,,,568
+samli_0026,Sensor Online,The paired sensor is online.,system_compliance,System Complied,EID 009: System Complied,passed,FALSE,None,samli,TRUE,samli,,,569
+samli_0027,Edge Offline Error,The edge device is offline/no internet connection.,system_compliance,General Error,EID 008: General Error,failed,TRUE,Critical Error,samli,TRUE,samli,,,570
+samli_0028,Edge Device Online,The edge device is connected to the internet.,system_compliance,System Complied,EID 009: System Complied,passed,FALSE,None,samli,TRUE,samli,,,571
+samli_0029,SQL Server Offline Error,Cannot connect to the SQL server.,system_compliance,General Error,EID 008: General Error,failed,TRUE,Critical Error,samli,TRUE,samli,,,572
+samli_0030,SQL Server Online,Viana service on the edge can connect and read Ossid “Queue” Package Validation from the SQL server.,system_compliance,System Complied,EID 009: System Complied,passed,FALSE,None,samli,TRUE,samli,,,573
+samli_0031,Viana Cloud Connection Error,Cannot connect with Viana Cloud.,system_compliance,General Error,EID 008: General Error,failed,TRUE,Critical Error,samli,TRUE,samli,,,574
+samli_0032,Connected to Viana Cloud,Viana service on the edge is connected to Viana Cloud.,system_compliance,System Complied,EID 009: System Complied,passed,FALSE,None,samli,TRUE,samli,,,575
+samli_0033,FOV Obstruction Error,FOV obstruction has been detected.,system_compliance,General Error,EID 008: General Error,failed,TRUE,Critical Error,samli,TRUE,samli,,,576
+samli_0034,No FOV Obstruction,No FOV obstruction has been detected.,system_compliance,System Complied,EID 009: System Complied,passed,FALSE,None,samli,TRUE,samli,,,577
+sos_0003,Order In,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,580
+sos_0004,Order Out,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,581
+sos_0005,HOP In,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,582
+sos_0002,Queue Out,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,579
+ze_0001,FOV First Seen,,ze_compliance,ZE Compliance,EID 001,passed,TRUE,,,,ze,,,598
+ze_0002,FOV Last Seen,,ze_compliance,ZE Compliance,EID 001,passed,TRUE,,,,ze,,,599
+ze_0003,Trip In,,trip_compliance,Trip Compliance,EID 002,passed,TRUE,,,,ze,,,600
+ze_0004,Trip Out,,trip_compliance,Trip Compliance,EID 002,passed,TRUE,,,,ze,,,601
+ze_0005,Zone In,,zone_compliance,Zone Compliance,EID 003,passed,TRUE,,,,ze,,,602
+ze_0006,Zone Out,,zone_compliance,Zone Compliance,EID 004,passed,TRUE,,,,ze,,,603
+ze_0007,Sensor Online,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,ze,,,604
+ze_0008,Sensor Offline Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,ze,,,605
+ze_0009,Edge Device Online,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,ze,,,606
+ze_0010,Edge Offline Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,ze,,,607
+ze_0011,Connected to Viana Cloud,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,ze,,,608
+ze_0012,Viana Cloud Connection Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,ze,,,609
+ze_0013,No FOV Obstruction,,system_compliance,Sytem Compliance,EID 005,passed,TRUE,,,,ze,,,610
+sos_0019,Reach In,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,596
+ze_0014,FOV Obstruction Error,,system_compliance,Sytem Compliance,EID 005,failed,TRUE,,,,ze,,,611
+sos_0022,Reach Out,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,597
+sos_0006,HOP Out,,journey_compliance,Journey Compliance,EID 001,passed,FALSE,None,sos,TRUE,sos,,,583
+sos_0007,Quick Queue,,queue_compliance,Queue Compliance,EID 002,passed,TRUE,None,sos,TRUE,sos,,,584
+sos_0008,Fair Queue,,queue_compliance,Queue Compliance,EID 002,passed,TRUE,Warning,sos,TRUE,sos,,,585
+sos_0009,Lengthy Queue,,queue_compliance,Queue Compliance,EID 002,failed,TRUE,Critical Error,sos,TRUE,sos,,,586
+sos_0010,Quick Order,,order_compliance,Order Compliance,EID 003,passed,TRUE,None,sos,TRUE,sos,,,587
+sos_0011,Fair Order,,order_compliance,Order Compliance,EID 003,passed,TRUE,Warning,sos,TRUE,sos,,,588
+sos_0012,Lengthy Order,,order_compliance,Order Compliance,EID 003,failed,TRUE,Critical Error,sos,TRUE,sos,,,589
+sos_0013,Quick Pickup,,hop_compliance,Hop Compliance,EID 004,passed,TRUE,None,sos,TRUE,sos,,,590
+sos_0014,Fair Pickup,,hop_compliance,Hop Compliance,EID 004,passed,TRUE,Warning,sos,TRUE,sos,,,591
+sos_0015,Lengthy Pickup,,hop_compliance,Hop Compliance,EID 004,failed,TRUE,Critical Error,sos,TRUE,sos,,,592
+sos_0016,Converted: Cafe,,purchase_compliace,Purchase Compliance,EID 005,passed,TRUE,None,sos,TRUE,sos,,,593
+sos_0017,Converted: MOP(Mobile Purchase),,purchase_compliace,Purchase Compliance,EID 005,passed,TRUE,None,sos,TRUE,sos,,,594
+sos_0018,Balked,,purchase_compliace,Purchase Compliance,EID 005,failed,TRUE,Critical Error,sos,TRUE,sos,,,595

@@ -1,0 +1,41 @@
+    async def _generate_with_custom_llm(self, prompt: str) -> LogDiagnosis:
+        if not self.custom_llm_url:
+            raise RuntimeError("CUSTOM_LLM_URL not set")
+
+        system_prompt = OPS_SYSTEM_PROMPT
+
+        response = await self._client.post(
+            self.custom_llm_url,
+            headers={"Content-Type": "application/json"},
+            json={
+                "model": self.custom_llm_model,
+                "system_prompt": system_prompt,
+                "input": prompt,
+            },
+            timeout=15.0,
+        )
+        response.raise_for_status()
+
+        data = response.json()
+        logger.info("[FLAMME CUSTOM] Response keys: %s", list(data.keys()))
+
+        text = ''
+        if 'output' in data and isinstance(data['output'], list):
+            msg = next((item for item in data['output'] if item.get('type') == 'message'), None)
+            text = msg['content'] if msg else ''
+        elif 'response' in data:
+            text = data['response']
+        elif 'text' in data:
+            text = data['text']
+        elif data.get('choices'):
+            text = data['choices'][0]['message']['content']
+
+        if not text.strip():
+            raise ValueError("Custom LLM returned empty response")
+
+        data_dict = json.loads(text.strip())
+        return LogDiagnosis(
+            root_cause=str(data_dict.get("root_cause", "")).strip(),
+            first_action=str(data_dict.get("first_action", "")).strip(),
+            question=str(data_dict.get("question", "")).strip(),
+        )

@@ -1,0 +1,1 @@
+give me the heartbeat logs 5 minutes ago of device serial id 9a1919ae-186d-4771-9ab5-a76390cc7538

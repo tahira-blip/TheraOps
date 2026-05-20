@@ -1,0 +1,55 @@
+graph TD
+    subgraph Slack["Slack Events"]
+        A[/thera logs service/]
+        B[Thread Reply]
+        C[Bot Mention]
+    end
+
+    subgraph Bot["T-hera Bot (TS)"]
+        D[command.ts]
+        E[threads.ts]
+        F[mention.ts]
+    end
+
+    subgraph Backend["FastAPI Backend (Python)"]
+        G[main.py /slack/logs]
+        H[slack.py]
+        I[fern_watcher.py Poll]
+    end
+
+    subgraph Data["Data Sources"]
+        J[Graylog API<br/>universal/relative]
+        K[Frieren<br/>incidents.json]
+        L[LLM<br/>Gemini/Custom]
+    end
+
+    subgraph Alerts["Slack Alerts"]
+        M[Spike Alert]
+        N[Diagnosis Blocks]
+    end
+
+    A --> D
+    B --> E
+    C --> F
+    D --> G
+    E --> H
+    F --> H
+    I --> J
+
+    G --> J
+    G --> K
+    H --> J
+    H --> K
+
+    J --> L
+    K --> L
+
+    L --> N
+    I --> M
+
+    M --> N
+    N --> Alerts
+
+    style I fill:#ff9999
+    style L fill:#99ccff
+

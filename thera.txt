@@ -1,0 +1,4 @@
+to run backend:
+uvicorn theraops_backend.main:app --reload --port 8000
+to run bot:
+npm run dev

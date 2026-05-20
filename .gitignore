@@ -1,0 +1,14 @@
+thera-bot/node_modules/
+thera-bot/dist/
+
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+.env
+thera-bot/.env
+theraops_backend/.env
+
+theraops_backend/data/incidents.json

@@ -1,0 +1,1 @@
+# T-hera TypeScript Fixes\n\n- [x] Fix 'Cannot find name err' and console.error typing in src/handlers/dm.ts\n  - Restructure catch scope\n  - Type error as unknown with instanceof Error check\n  - console.error fixed with simple arg\n  - Full file recreated for precision\n\n- [ ] Verify runtime DM error handling (test npm start in thera-bot/)\n- [ ] attempt_completion
