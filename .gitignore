@@ -1,14 +1,33 @@
+# Node build and dependencies
 thera-bot/node_modules/
 thera-bot/dist/
 
+# Python caches and virtual envs
 **/__pycache__/
+__pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 .pytest_cache/
 .venv/
 venv/
+env/
+env.bak/
 
+# Local environment files
 .env
 thera-bot/.env
+thera-bot/.env.local
 theraops_backend/.env
 
+# Generated/backend runtime artifacts
 theraops_backend/data/incidents.json
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.sqlite3
+*.db
